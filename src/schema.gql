@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CreateProfileDto {
+  id: ID!
+  name: String!
+  age: Int!
+}
+
+type UpdateProfileDto {
+  id: ID
+  name: String
+  age: Int
+}
+
+type Query {
+  greet: String!
+  profiles: [CreateProfileDto!]!
+}
+
+type Mutation {
+  addProfile(input: ProfileInput!): CreateProfileDto!
+  deleteProfile(input: String!): CreateProfileDto!
+  updateProfile(input: UpdateProfileInput!): UpdateProfileDto!
+}
+
+input ProfileInput {
+  name: String!
+  age: Int!
+}
+
+input UpdateProfileInput {
+  id: String!
+  name: String
+  age: Int
+}
